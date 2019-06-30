@@ -10,8 +10,11 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class DataRepoImpl @Inject constructor(api: Apis) : IDataRepo {
+
+
     val mApis: Apis = api
     override fun getData(url: String, callback: IDataRepo.RepoCallback<List<DataModel>>) {
+
         val call = mApis.getData(url)
         call.enqueue(object : Callback<List<DataModel>> {
             override fun onResponse(call: Call<List<DataModel>>, response: Response<List<DataModel>>) {

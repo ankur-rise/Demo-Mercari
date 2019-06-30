@@ -59,7 +59,10 @@ class DealFragment : Fragment(), FragmentContract.View {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val i=10
+        when(i in 1..15){
 
+        }
         arguments?.let {
             url = it.getString(KEY_URL)
         }
